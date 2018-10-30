@@ -23,6 +23,7 @@ import { HttpModule } from '@angular/http';
 
 import { FormsModule } from '@angular/forms';
 import { UsersProvider } from '../providers/users/users';
+import { MikrotikdetailPage } from '../pages/mikrotikdetail/mikrotikdetail';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyBQ6hK0YTIf4cXdkDQue8Q7qDBNsE9QMZQ",
@@ -41,6 +42,7 @@ export const firebaseConfig = {
     AboutPage,
     FeedbackPage,
     MikrotikPage,
+    MikrotikdetailPage,
     MyAccountPage,
     SearchPage,
     TeamPage
@@ -64,6 +66,7 @@ export const firebaseConfig = {
     FeedbackPage,
     MikrotikPage,
     MyAccountPage,
+    MikrotikdetailPage,
     SearchPage,
     TeamPage
   ],

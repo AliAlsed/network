@@ -1,5 +1,7 @@
+import { MikrotikdetailPage } from './../mikrotikdetail/mikrotikdetail';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { UsersProvider } from '../../providers/users/users';
 
 /**
  * Generated class for the MikrotikPage page.
@@ -15,7 +17,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class MikrotikPage {
   list:any;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  commands:any;
+  constructor(public navCtrl: NavController, public navParams: NavParams , public user:UsersProvider) {
   }
 
   ionViewDidLoad() {
@@ -34,6 +37,20 @@ export class MikrotikPage {
     this.list.push('Create login page(Hotspot)');
 
     console.log('ionViewDidLoad MikrotikPage');
+  }
+
+  detail(node){
+    this.user.read(node).on("value",snapshot=>{
+      this.commands=[];
+      snapshot.forEach( (snap) =>{
+        this.commands.push(snap.val());
+        return false;
+      });
+      console.log(this.commands);
+      if(this.commands !=null){
+        this.navCtrl.push(MikrotikdetailPage,{'node':node,'data':this.commands});
+      }
+    });
   }
 
 }

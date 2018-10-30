@@ -10,7 +10,6 @@ import * as firebase from 'firebase'
 @Injectable()
 export class UsersProvider {
   fireuser = firebase.database().ref('mikrotik');
-  users:any;
   constructor(public db:AngularFireDatabase) {
   }
 
