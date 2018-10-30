@@ -10,6 +10,7 @@ import * as firebase from 'firebase'
 @Injectable()
 export class UsersProvider {
   fireuser = firebase.database().ref('mikrotik');
+  firecisco = firebase.database().ref('cisco');
   constructor(public db:AngularFireDatabase) {
   }
 
@@ -20,4 +21,9 @@ export class UsersProvider {
   read(node):firebase.database.Reference{
     return this.fireuser.child(`${node}`);
   }
+  readcisco(page):firebase.database.Reference{
+    return this.firecisco.child(`${page}`);
+  }
+
+
 }

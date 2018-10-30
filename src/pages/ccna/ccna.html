@@ -10,12 +10,22 @@
       <button ion-button menuToggle>
           <ion-icon name="menu"></ion-icon>
         </button>
-    <ion-title>ccna</ion-title>
+    <ion-title>Cisco</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content>
-  
+  <ion-grid >
+    <ion-row >
+      <ion-col col-12 *ngFor="let i of ccna" style="text-align:center; margin-top:50px;padding:10px">
+        <div (click)="detail(i)">
+            <img src="assets/imgs/ccna.png">
+            <p style="text-align: center">{{i}}</p>
+        </div>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

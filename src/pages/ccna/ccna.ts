@@ -1,3 +1,4 @@
+import { CiscoPage } from './../cisco/cisco';
 import { Component } from '@angular/core';
 import {  NavController, NavParams } from 'ionic-angular';
 
@@ -12,12 +13,16 @@ import {  NavController, NavParams } from 'ionic-angular';
   templateUrl: 'ccna.html',
 })
 export class CcnaPage {
-
+  ccna:any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CcnaPage');
+    this.ccna=[];
+    this.ccna.push('Routing');
+    this.ccna.push('Switching');
   }
-
+  detail(i){
+    return this.navCtrl.push(CiscoPage,{'page':i});
+  }
 }

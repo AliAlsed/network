@@ -24,6 +24,7 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { UsersProvider } from '../providers/users/users';
 import { MikrotikdetailPage } from '../pages/mikrotikdetail/mikrotikdetail';
+import { CiscoPage } from '../pages/cisco/cisco';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyBQ6hK0YTIf4cXdkDQue8Q7qDBNsE9QMZQ",
@@ -41,6 +42,7 @@ export const firebaseConfig = {
     CcnaPage,
     AboutPage,
     FeedbackPage,
+    CiscoPage,
     MikrotikPage,
     MikrotikdetailPage,
     MyAccountPage,
@@ -62,6 +64,7 @@ export const firebaseConfig = {
     HomePage,
     ListPage,
     CcnaPage,
+    CiscoPage,
     AboutPage,
     FeedbackPage,
     MikrotikPage,

@@ -21,8 +21,10 @@
   
   <ion-list>
     <ion-item *ngFor="let i of command">
-      <p *ngIf="i.title != null" style="color: black">{{i.title}}:</p><br>
+      <p  *ngIf="i.title != null" style="color: black">{{i.title}}:</p><br>
+      
       <ion-note text-wrap style="color:black">{{i.command}}</ion-note>
+      <p text-wrap *ngIf="i.disc != null" style="color: black">{{i.disc}}:</p><br>
     </ion-item>
   </ion-list>
 
